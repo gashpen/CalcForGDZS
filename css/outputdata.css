@@ -1,12 +1,11 @@
 .output_area_wrapper{
     width: 85vw;
-    margin: 20px 0;
 }
 .gdzs__output-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0px;
+    margin-top: 85px;
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -21,4 +20,6 @@
 }
 .gdzs__tab-error{
     font-size: 20px;
+    color: white;
+    text-align: center;
 }

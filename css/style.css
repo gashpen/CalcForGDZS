@@ -16,6 +16,7 @@ html,body{
 .header_wrapper{
     max-width: 100%;
     height: 100px;
+    display: none;
 }
 
 .description_gdzs{
@@ -38,11 +39,26 @@ html,body{
     background-image: url('./5f35b2c7e85fc7f.gif');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 130%;
+    background-size: 108vw;
+
 }
+  @media (min-width: 360px) and (max-width: 640px) {
+    .main{
+        background-size: 167vw;
+        background-position-x: -97px;
+        background-position-y: -93px;
+    }
+  }
+
+  @media (min-width: 260px) and (max-width: 360px) {
+    .main{
+        background-size: 200vw;
+        background-position-x: -115px;
+    }
+  }
 
 .main_wrapper{
-    height: 100%;
+    height: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;

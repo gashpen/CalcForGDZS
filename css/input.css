@@ -6,7 +6,8 @@
 .input_pressure{
     min-width: 30px;
     height: 30px;
-    max-width: 250px
+    max-width: 250px;
+    margin-top: 10px
 }
 .input_pressure-time{
     min-width: 30px;
@@ -21,7 +22,7 @@
 }
 
 .input_wrapper{
-    padding-top: 30px;
+    padding-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,9 +30,11 @@
 }
 
 .btn_submit{
+    margin-top: 10px;
     height: 35px;
     width: 200px;
     display: block;
+    -webkit-appearance: none;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
