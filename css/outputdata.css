@@ -1,12 +1,13 @@
 .output_area_wrapper{
-    width: 89%;
+    width: 85vw;
     background-color: #D9D9D9;
-    margin: 0 auto
+    margin: 20px 0;
 }
 .gdzs__output-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px 0px;
 }
 
 .output_area{
@@ -16,4 +17,8 @@
 
 .gdzs__tab{
     font-size: 12px;
+}
+.gdzs__tab-error{
+    font-size: 20px;
+    color:darkred;
 }

@@ -38,7 +38,7 @@ function calc(time, P){
         console.log(`Один из параметров не задан или задан не верно`);
         outputAreaWrapper.innerHTML = `
         <div class="gdzs__output-wrapper">
-          <span class="gdzs__tab">Один из параметров не задан или задан не верно</span>
+          <span class="gdzs__tab-error">Один из параметров не задан или задан не верно</span>
         </div>
     `
         return
