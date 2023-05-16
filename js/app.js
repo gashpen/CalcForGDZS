@@ -3,6 +3,7 @@ const inputFormTime = document.querySelector('.input_pressute-time');
 const btnSubmit = document.querySelector('.btn_submit');
 const outputAreaWrapper = document.querySelector('.output_area_wrapper');
 const gdzsOutputWrapper = document.querySelector('.gdzs__output-wrapper');
+const descriptionGdzs = document.querySelector('description_gdzs');
 
 let arr = [];
 
@@ -35,6 +36,11 @@ function calc(time, P){
 
     if(time === null || time === undefined || P === null || P === undefined || P <= 0){
         console.log(`Один из параметров не задан или задан не верно`);
+        outputAreaWrapper.innerHTML = `
+        <div class="gdzs__output-wrapper">
+          <span class="gdzs__tab">Один из параметров не задан или задан не верно</span>
+        </div>
+    `
         return
     }
 

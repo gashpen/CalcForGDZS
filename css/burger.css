@@ -8,7 +8,7 @@
     height: 55px;
     cursor: pointer;
     z-index: 50;
-
+    display: none;
 }
 
 .burger_menu > span,
