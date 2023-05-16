@@ -1,8 +1,8 @@
 .input_pressure{
     min-width: 30px;
-    height: 40px;
+    height: 30px;
     margin-left: 20px;
-    border-radius: 0px;
+    max-width: 250px
 }
 .input_pressure-time{
     min-width: 30px;
@@ -13,10 +13,13 @@
 
 .input_wrapper{
     padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn_submit{
     height: 50px;
     width: 50px;
-    border-radius: 0px;
+    margin-left: 20px;
 }

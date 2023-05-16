@@ -6,7 +6,7 @@ const gdzsOutputWrapper = document.querySelector('.gdzs__output-wrapper');
 
 let arr = [];
 
-btnSubmit.addEventListener('click',()=>{
+btnSubmit.addEventListener('click',(e)=>{
     inputForm.forEach((element)=>{
         if(element.value.trim()){
             arr.unshift(element.value);
@@ -14,6 +14,7 @@ btnSubmit.addEventListener('click',()=>{
         element.value = '';
     });
     calc(arr[1],arr[0]);
+    e.preventDefault()
 });
 
 function calc(time, P){
@@ -79,7 +80,7 @@ function calc(time, P){
         console.log(`Время при котором звено обязано вернуться ${date.getHours()+":"+date.getMinutes()}`)
     }
 
-    outputAreaWrapper.innerHTML += `
+    outputAreaWrapper.innerHTML = `
         <div class="gdzs__output-wrapper">
           <span class="gdzs__tab">P.max.пад = ${pMaxDrop}</span>
           <span class="gdzs__tab">P.вых = ${pToExit}</span>
