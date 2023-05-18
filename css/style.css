@@ -1,12 +1,22 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Pixel Font, sans-serif
 }
 
 html,body{
     overflow-x: hidden;
-    }
+}
+
+body{
+    background-image: url('../img/jasontomlee-2-17-fire-final-1920x.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family: "Pixel Font";
+    src: url("../fonts/F77\ Minecraft.ttf");
+  }
 
 .header{
     max-width: 100%;
@@ -16,7 +26,6 @@ html,body{
 .header_wrapper{
     max-width: 100%;
     height: 100px;
-    display: none;
 }
 
 .description_gdzs{
@@ -34,33 +43,13 @@ html,body{
 
 .main{
     height: 100%;
-    background: #A2A2A2;
-    padding-top: 1px;
-    background-image: url('./5f35b2c7e85fc7f.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 108vw;
 
 }
-  @media (min-width: 360px) and (max-width: 640px) {
-    .main{
-        background-size: 167vw;
-        background-position-x: -97px;
-        background-position-y: -93px;
-    }
-  }
-
-  @media (min-width: 260px) and (max-width: 360px) {
-    .main{
-        background-size: 200vw;
-        background-position-x: -115px;
-    }
-  }
 
 .main_wrapper{
-    height: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 463px;
 }

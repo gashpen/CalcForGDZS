@@ -1,5 +1,5 @@
-const inputForm = document.querySelectorAll('.input_pressure');
-const inputFormTime = document.querySelector('.input_pressute-time');
+const inputForm = document.querySelectorAll('.input_pressure');;
+const inputFormTime = document.querySelector('.input_pressure-time');
 const btnSubmit = document.querySelector('.btn_submit');
 const outputAreaWrapper = document.querySelector('.output_area_wrapper');
 const gdzsOutputWrapper = document.querySelector('.gdzs__output-wrapper');
@@ -9,14 +9,20 @@ let arr = [];
 
 btnSubmit.addEventListener('click',(e)=>{
     inputForm.forEach((element)=>{
-        if(element.value.trim()){
-            arr.unshift(element.value);
+        if(element.value.trim()){ 
+            arr.unshift(element.value.replace(':',''));
         };
         element.value = '';
     });
     calc(arr[1],arr[0]);
-    e.preventDefault()
+    e.preventDefault();
 });
+
+inputFormTime.addEventListener('input', e => {
+    const v = e.target.value;
+    inputFormTime.value = v.length ? v.replace(/:/g, '').match(/.{1,2}/g).join(':') : '';
+  });
+
 
 function calc(time, P){
     const date = new Date();

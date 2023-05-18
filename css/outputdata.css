@@ -5,8 +5,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 85px;
     background: rgba(0, 0, 0, 0.5);
+    padding: 55px 0px;
+    margin: 30px 0;
 }
 
 .output_area{
@@ -15,8 +16,9 @@
 }
 
 .gdzs__tab{
-    font-size: 12px;
     color: white;
+    padding: 4px;
+    font-size: 20px;
 }
 .gdzs__tab-error{
     font-size: 20px;

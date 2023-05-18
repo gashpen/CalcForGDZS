@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/burger.css">
     <link rel="stylesheet" href="css/input.css">
     <link rel="stylesheet" href="css/outputdata.css">
+    <link rel="stylesheet" href="css/footer.css">
     
 </head>
 <body>
@@ -27,8 +28,8 @@
             <div class="description_gdzs"></div>
             <div class="input_wrapper">
                 <form class="input__form">
-                    <input id="inputGdzs" type="number" maxlength="4" class="input_pressure" placeholder="time">
-                    <input id="inputGdzs" type="number" class="input_pressure" placeholder="pressure">
+                    <input id="inputGdzs" type="text" maxlength="5" class="input_pressure input_pressure-time" placeholder="time" autocomplete="off">
+                    <input id="inputGdzs" type="number" class="input_pressure" placeholder="pressure" autocomplete="off">
                     <input type="submit" class="btn_submit" value="Рассчитать!">
                 </form>        
             </div>
@@ -37,6 +38,11 @@
             </div>
         </div>
     </main>
+    <footer class="footer__wrapper">
+        <div class="footer">
+
+        </div>
+    </footer>
     <script src="js/app.js"></script>
 </body>
 </html>
