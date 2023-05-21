@@ -10,7 +10,6 @@ const ballonValue = document.querySelector('.balloon__value');
 const popupForm = document.querySelector('.popup__form');
 const getPopup = document.querySelector('.popup');
 const popuptext = document.querySelector('.popuptext');
-
 let ballonSize = 0;
 let arr = [];
 
@@ -62,8 +61,6 @@ document.addEventListener( 'click', (e) => {
 getPopup.addEventListener('click',()=>{
     popuptext.classList.add('show');
 })
-
-
 
 function calc(time, P){
     const date = new Date();
