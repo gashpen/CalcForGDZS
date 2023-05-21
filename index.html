@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>calc</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/burger.css">
     <link rel="stylesheet" href="css/input.css">
     <link rel="stylesheet" href="css/outputdata.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/popup.css">
     
 </head>
 <body>
@@ -27,7 +28,16 @@
         <div class="main_wrapper">
             <div class="description_gdzs"></div>
             <div class="input_wrapper">
-                <form class="input__form">
+                <form class="popup__form">
+                    <div class="popup">Settings!
+                        <div class="popuptext" id="myPopup">
+                            <label class="check_descr"><input type="checkbox" value="2 баллона" class="chekbox__balloon-two"> 2 баллона</label>  
+                            <label class="check_descr"><input type="checkbox" class="chekbox__ballon-oxygen"> ДАСК</label>
+                            <label class="check_descr"><input type="number" autocomplete="off" step="any" class="balloon__value"> объем баллона</label>
+                        </div>
+                      </div>
+                </form>
+                <form class="input__form">	
                     <input id="inputGdzs" type="text" maxlength="5" class="input_pressure input_pressure-time" placeholder="time" autocomplete="off">
                     <input id="inputGdzs" type="number" class="input_pressure" placeholder="pressure" autocomplete="off">
                     <input type="submit" class="btn_submit" value="Рассчитать!">
@@ -44,5 +54,6 @@
         </div>
     </footer>
     <script src="js/app.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 </html>
