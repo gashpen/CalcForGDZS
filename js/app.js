@@ -32,8 +32,8 @@ inputFormTime.addEventListener('input',(e) => {
 popupForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     if(ballonValue.value.trim()){
-        ballonSize = ballonValue.value
-        console.log(ballonValue.value)
+        ballonSize = ballonValue.value;
+        console.log(ballonValue.value);
     }
     ballonValue.value = '';
 })
@@ -41,8 +41,8 @@ popupForm.addEventListener('submit',(e)=>{
 popupForm.addEventListener('blur',(e)=>{
     e.preventDefault();
     if(ballonValue.value.trim()){
-        ballonSize = ballonValue.value
-        console.log(ballonValue.value)
+        ballonSize = ballonValue.value;
+        console.log(ballonValue.value);
     }
     ballonValue.value = '';
 },true)
@@ -55,6 +55,9 @@ document.addEventListener( 'click', (e) => {
 		popuptext.style.display = 'none'; // скрываем элемент т к клик был за его пределами
 	} else {
         popuptext.style.display = 'block';
+    };
+    if(popuptext.style.display === 'none'){
+        console.log('123')
     }
 });
 
@@ -85,11 +88,10 @@ function calc(time, P){
     };
     if(checkboxBaloonOxygen.checked){
         averageСonsumption = 2;
-        ballonSize = 2
+        ballonSize = 2;
     };
-
     if(!ballonSize){
-        ballonSize = 6.8
+        ballonSize = 6.8;
     };
 
     if(time === null || time === undefined || P === null || P === undefined || P <= 0){
@@ -98,48 +100,36 @@ function calc(time, P){
         <div class="gdzs__output-wrapper">
           <span class="gdzs__tab-error">Один из параметров не задан или задан не верно</span>
         </div>
-    `
-        return
+    `;
+        return;
     };
 
     pMaxDrop = Math.round(P / 3);
- 
     pToExit = P - pMaxDrop;
-   
     deltaT = Math.round((pMaxDrop * (ballonSize * twoBallon)) / averageСonsumption);
-  
     tExitComand = date.setMinutes(date.getMinutes() + deltaT);
     if(date.getMinutes() <= 9 && date.getHours() <= 9){
         tExitComand = "0"+date.getHours()+":"+"0"+date.getMinutes();
-        
     } else if(date.getMinutes() <= 9){
-        tExitComand = date.getHours()+":"+"0"+date.getMinutes()
-       
+        tExitComand = date.getHours()+":"+"0"+date.getMinutes();
     } else if(date.getHours() <= 9){
-        tExitComand = "0"+date.getHours()+":"+date.getMinutes()
-        
+        tExitComand = "0"+date.getHours()+":"+date.getMinutes();
     } else {
-        tExitComand = date.getHours()+":"+date.getMinutes()
-       
-    }
+        tExitComand = date.getHours()+":"+date.getMinutes();
+    };
 
     tGeneral = Math.round((P * (ballonSize * twoBallon)) / averageСonsumption);
-
-
     date.setMinutes(date.getMinutes() + tGeneral);
+
     if(date.getMinutes() <= 9 && date.getHours() <= 9){
-        tReturn = "0"+date.getHours()+":"+"0"+date.getMinutes()
- 
+        tReturn = "0"+date.getHours()+":"+"0"+date.getMinutes();
     } else if(date.getMinutes() <= 9){
-        tReturn = date.getHours()+":"+"0"+date.getMinutes()
-
+        tReturn = date.getHours()+":"+"0"+date.getMinutes();
     } else if(date.getHours() <= 9){
-        tReturn = "0"+date.getHours()+":"+date.getMinutes()
-
+        tReturn = "0"+date.getHours()+":"+date.getMinutes();
     } else {
-        tReturn = date.getHours()+":"+date.getMinutes()
-
-    }
+        tReturn = date.getHours()+":"+date.getMinutes();
+    };
 
     outputAreaWrapper.innerHTML = `
         <div class="gdzs__output-wrapper">
@@ -150,7 +140,47 @@ function calc(time, P){
           <span class="gdzs__tab">Т.вых = ${tExitComand}</span>
           <span class="gdzs__tab">Т.контр.вых = ${tReturn}</span>
         </div>
-    `
+    `;
+
+    setInterval(()=>{
+
+    })
 
     
 };
+
+
+function quoterScroller(){
+
+    let quoterArr = 
+
+    ["Здравствуй,брат",
+    "Не кипишуй",
+    "Давай как нибудь сам",
+    "Мне чет лень",
+    "Салам аллейкум, да ха!",
+    "Все пока!",
+    "!!!!",
+    "Давай до свидания",
+     "Нет!",
+     "Да!"
+    ];
+
+    for(let i = 0; i < quoterArr.length;i++){
+
+    return quoterArr[Math.floor(Math.random() * 10)] 
+
+  }
+ 
+}
+
+/*setInterval(()=>{
+
+    outputAreaWrapper.innerHTML = `
+    <div class="message">
+      <div class="message__text">
+       ${quoterScroller()}
+      </div>
+    </div>
+  `;
+  },1000)*/
