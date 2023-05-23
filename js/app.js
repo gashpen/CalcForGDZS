@@ -1,11 +1,10 @@
 const inputForm = document.querySelectorAll('.input_pressure');;
 const inputFormTime = document.querySelector('.input_pressure-time');
-const btnSubmit = document.querySelector('.btn_submit');
 const outputAreaWrapper = document.querySelector('.output_area_wrapper');
 const gdzsOutputWrapper = document.querySelector('.gdzs__output-wrapper');
 const descriptionGdzs = document.querySelector('description_gdzs');
 const checkboxBalloonTwo = document.querySelector('.chekbox__balloon-two');
-const checkboxBaloonOxygen = document.querySelector('.chekbox__ballon-oxygen');
+const checkboxBaloonOxygen = document.querySelector('.chekbox__balloon-oxygen');
 const ballonValue = document.querySelector('.balloon__value');
 const popupForm = document.querySelector('.popup__form');
 const getPopup = document.querySelector('.popup');
@@ -13,57 +12,6 @@ const popuptext = document.querySelector('.popuptext');
 let ballonSize = 0;
 let arr = [];
 
-btnSubmit.addEventListener('click',(e)=>{
-    inputForm.forEach((element)=>{
-        if(element.value.trim()){ 
-            arr.unshift(element.value.replace(':',''));
-        };
-        element.value = '';
-    });
-    calc(arr[1],arr[0]);
-    e.preventDefault();
-});
-
-inputFormTime.addEventListener('input',(e) => {
-    const v = e.target.value;
-    inputFormTime.value = v.length ? v.replace(/:/g, '').match(/.{1,2}/g).join(':') : '';
-  });
-
-popupForm.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    if(ballonValue.value.trim()){
-        ballonSize = ballonValue.value;
-        console.log(ballonValue.value);
-    }
-    ballonValue.value = '';
-})
-
-popupForm.addEventListener('blur',(e)=>{
-    e.preventDefault();
-    if(ballonValue.value.trim()){
-        ballonSize = ballonValue.value;
-        console.log(ballonValue.value);
-    }
-    ballonValue.value = '';
-},true)
-
-
-document.addEventListener( 'click', (e) => {
-	const withinBoundaries = e.composedPath().includes(popuptext);
- 
-	if ( ! withinBoundaries && e.target != document.querySelector('.popup')) {
-		popuptext.style.display = 'none'; // скрываем элемент т к клик был за его пределами
-	} else {
-        popuptext.style.display = 'block';
-    };
-    if(popuptext.style.display === 'none'){
-        console.log('123')
-    }
-});
-
-getPopup.addEventListener('click',()=>{
-    popuptext.classList.add('show');
-})
 
 function calc(time, P){
     const date = new Date();
@@ -141,46 +89,5 @@ function calc(time, P){
           <span class="gdzs__tab">Т.контр.вых = ${tReturn}</span>
         </div>
     `;
-
-    setInterval(()=>{
-
-    })
-
-    
 };
 
-
-function quoterScroller(){
-
-    let quoterArr = 
-
-    ["Здравствуй,брат",
-    "Не кипишуй",
-    "Давай как нибудь сам",
-    "Мне чет лень",
-    "Салам аллейкум, да ха!",
-    "Все пока!",
-    "!!!!",
-    "Давай до свидания",
-     "Нет!",
-     "Да!"
-    ];
-
-    for(let i = 0; i < quoterArr.length;i++){
-
-    return quoterArr[Math.floor(Math.random() * 10)] 
-
-  }
- 
-}
-
-/*setInterval(()=>{
-
-    outputAreaWrapper.innerHTML = `
-    <div class="message">
-      <div class="message__text">
-       ${quoterScroller()}
-      </div>
-    </div>
-  `;
-  },1000)*/

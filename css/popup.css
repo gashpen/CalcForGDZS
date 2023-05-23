@@ -1,15 +1,58 @@
+.popup__form{
+    position: relative;
+    left: 135px;
+    top: 55px;
+}
+
 .popup {
     position: relative;
     cursor: pointer;
     display: flex;
     align-items: center;
     height: 50px;
+    z-index: 1;
+    top: 49px;
+    width: 50px;
 }
+
+
+ .gear{
+    
+    position: relative;
+    width: 45px;
+    left: 210px;
+    top: 55px;
+    z-index: 0;
+ }
+
+ .animated{
+    animation-timing-function: linear;
+    animation-name: animated_gear;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+ }
+
+ @keyframes animated_gear {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  @-webkit-keyframes animated_gear {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  } 
 
 .popup .popuptext {
     visibility: hidden;
     width: 230px;
-    background-color: #555;
+    background-color:rgba(105, 105, 105, 0.8);
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -48,22 +91,25 @@
     to {opacity:1 ;}
 }
 
-.chekbox__balloon-two{
-    width: 25px;
-    height: 25px;
-
-}
-
-.chekbox__ballon-oxygen{
-    width: 25px;
-    height: 25px;
-}
-
 .balloon__value{
     width: 30px;
     margin-top: 5px;
+    background-color: rgba(255, 255, 128, .2);
+}
+
+
+
+.balloon__value::-webkit-outer-spin-button,
+.balloon__value::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .check_descr{
     margin: 5px 0px;
+}
+
+.description_box:hover{
+  cursor: pointer;
 }

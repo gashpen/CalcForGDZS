@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/outputdata.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/checkbox.css">
     
 </head>
 <body>
@@ -29,17 +30,30 @@
             <div class="description_gdzs"></div>
             <div class="input_wrapper">
                 <form class="popup__form">
-                    <div class="popup">Settings!
+                    <div class="popup">
                         <div class="popuptext" id="myPopup">
-                            <label class="check_descr"><input type="checkbox" value="2 баллона" class="chekbox__balloon-two"> 2 баллона</label>  
-                            <label class="check_descr"><input type="checkbox" class="chekbox__ballon-oxygen"> ДАСК</label>
-                            <label class="check_descr"><input type="number" autocomplete="off" step="any" class="balloon__value"> объем баллона</label>
+                            <label>
+                                <input type="checkbox" value="2 баллона" class="chekbox__balloon chekbox__balloon-two">
+                                <span class="fake"></span>
+                                <span class="description_box"> 2 баллона</span>
+
+                            </label>
+                            <label>
+                                <input type="checkbox" class="chekbox__balloon chekbox__balloon-oxygen">
+                                <span class="fake"></span>
+                                <span class="description_box">ДАСК</span>
+                            </label>
+                            <label>
+                                <input type="number" autocomplete="off" step="any" class="balloon__value">
+                                <span class="description_box">объем баллона</span>
+                            </label>
                         </div>
                     </div>
                 </form>
-                <form class="input__form">	
-                    <input id="inputGdzs" type="text" maxlength="5" class="input_pressure input_pressure-time" placeholder="time" autocomplete="off">
-                    <input id="inputGdzs" type="number" class="input_pressure" placeholder="pressure" autocomplete="off">
+                <form class="input__form">
+                    <img src="./img/shesterenka.png" class="gear">    	
+                    <input id="inputGdzs" type="text" maxlength="5" class="input_pressure input_pressure-time" placeholder="   time" autocomplete="off">
+                    <input id="inputGdzs" type="number" class="input_pressure" placeholder="   pressure" autocomplete="off">
                     <input type="submit" class="btn_submit" value="Рассчитать!">
                 </form>        
             </div>
@@ -54,6 +68,7 @@
         </div>
     </footer>
     <script src="js/app.js"></script>
+    <script src="js/input.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/quoterScroll.js"></script>
 </body>

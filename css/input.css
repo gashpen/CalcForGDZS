@@ -17,6 +17,13 @@
     font-size: 1em;
   }
 
+  .input_pressure::-webkit-outer-spin-button,
+  .input_pressure::-webkit-inner-spin-button {
+      /* display: none; <- Crashes Chrome on hover */
+      -webkit-appearance: none;
+      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
 .input_wrapper{
     padding-top: 70px;
     display: flex;
@@ -34,6 +41,9 @@
     border: 3px black ridge;
     opacity: 0.9;
     background-color: dimgrey;
+}
+.btn_submit:hover{
+    cursor: pointer;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {

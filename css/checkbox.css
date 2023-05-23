@@ -1,0 +1,48 @@
+.chekbox__balloon{
+    width: 25px;
+    height: 25px;
+
+}
+
+
+.chekbox__balloon{
+    display: none;
+}
+
+.fake{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px ridge black;
+    position: relative;
+    background-color: rgba(255, 255, 128, .2);
+}
+
+.fake::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/OnrQhz.gif);
+    background-repeat: no-repeat;
+    background-position-x: -8px;
+    background-position-y: -11px;
+    background-size: 41px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.fake:hover{
+    cursor: pointer;
+}
+
+.chekbox__balloon:checked + .fake::before{
+    opacity: 1;
+}
+
+
+
