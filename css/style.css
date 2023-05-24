@@ -9,10 +9,9 @@ html,body{
 }
 
 body{
-    background-image: url('../img/jasontomlee-2-17-fire-final-1920x.gif');
-    background-position: center;
-    background-repeat: no-repeat;
+    
 }
+
 @font-face {
     font-family: "Pixel Font";
     src: url("../fonts/F77\ Minecraft.ttf");
@@ -43,8 +42,26 @@ body{
 
 .main{
     height: 100%;
-
+    background-image: url('../img/jasontomlee-2-17-fire-final-1920x.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
 }
+
+.main:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    
+  }
 
 .main_wrapper{
     width: 100%;

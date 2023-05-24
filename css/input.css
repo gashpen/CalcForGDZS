@@ -9,8 +9,10 @@
     height: 30px;
     max-width: 250px;
     margin-top: 10px;
+    padding-left: 15px;
     border: 3px ridge black;
     background-color: rgba(255, 255, 128, .2);
+    outline: none;
 }
 .input_pressure::placeholder {
     color: black;
@@ -19,13 +21,20 @@
 
   .input_pressure::-webkit-outer-spin-button,
   .input_pressure::-webkit-inner-spin-button {
-      /* display: none; <- Crashes Chrome on hover */
       -webkit-appearance: none;
-      margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+      margin: 0;
   }
+  .input_pressure::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+  .input_pressure::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+  .input_pressure:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+  .input_pressure:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+  .input_pressure:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+  .input_pressure:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+  .input_pressure:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+  .input_pressure:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
 .input_wrapper{
-    padding-top: 70px;
+    padding-top: 185px;
     display: flex;
     flex-direction: column;
     align-items: center;

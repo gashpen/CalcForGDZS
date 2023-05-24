@@ -15,7 +15,6 @@
     width: 50px;
 }
 
-
  .gear{
     
     position: relative;
@@ -60,7 +59,7 @@
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 50%;
+    left: -170%;
     margin-left: -114px;
 }
 
@@ -68,7 +67,7 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 96%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
@@ -92,9 +91,11 @@
 }
 
 .balloon__value{
+    height: 20px;
     width: 30px;
     margin-top: 5px;
     background-color: rgba(255, 255, 128, .2);
+    outline: none
 }
 
 

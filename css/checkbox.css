@@ -13,7 +13,8 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: 2px ridge black;
+    border-top: 3px ridge black;
+    border-left: 3px ridge black;
     position: relative;
     background-color: rgba(255, 255, 128, .2);
 }
